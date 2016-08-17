@@ -1,2 +1,2 @@
-# python_examples
+# python-examples
 Misc python code examples 
