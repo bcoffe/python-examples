@@ -1,4 +1,4 @@
-from flask.ext.restful import abort, reqparse, Resource
+from flask_restful import abort, reqparse, Resource
 from accessors.sample_control_accessor import SampleControlAccessor
 
 # Notice there are 2 classes in this file. This is a little different than other languages because of the way

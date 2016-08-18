@@ -1,6 +1,6 @@
 from resources.sample_control import SampleControl, SampleControls
 from flask import Flask
-from flask.ext.restful import Api
+from flask_restful import Api
 from tornado.httpserver import HTTPServer
 from tornado.ioloop import IOLoop
 from tornado.wsgi import WSGIContainer
@@ -14,7 +14,7 @@ api = Api(app)
 # but we pick plural because it tends to be the favored practice.
 
 api.add_resource(SampleControl, '/sample_controls/<string:sample_id>')
-api.add_resource(SampleControl, '/sample_controls/<string:control_type>/<string:site>')
+#api.add_resource(SampleControl, '/sample_controls/<string:control_type>/<string:site>')
 api.add_resource(SampleControls, '/sample_controls')
 
 if __name__ == '__main__':
