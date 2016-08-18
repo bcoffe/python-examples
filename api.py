@@ -1,5 +1,4 @@
-from resources.sample_control import SampleControl
-from resources.sample_controls import SampleControls
+from resources.sample_control import SampleControl, SampleControls
 from flask import Flask
 from flask.ext.restful import Api
 from tornado.httpserver import HTTPServer
@@ -10,6 +9,7 @@ app = Flask(__name__)
 api = Api(app)
 
 api.add_resource(SampleControl, '/sample_control/<string:sample_id>')
+api.add_resource(SampleControl, '/sample_control/<string:control_type>/<string:site>')
 api.add_resource(SampleControls, '/sample_controls')
 
 if __name__ == '__main__':
