@@ -1,8 +1,7 @@
 from resources.sample_control import SampleControl
 from resources.sample_controls import SampleControls
-from flask import Flask, jsonify, request
-from flask.ext.restful import Api, abort, Resource
-from flask.ext.cors import CORS
+from flask import Flask
+from flask.ext.restful import Api
 from tornado.httpserver import HTTPServer
 from tornado.ioloop import IOLoop
 from tornado.wsgi import WSGIContainer

@@ -1,4 +1,4 @@
-from flask.ext.restful import reqparse, Api, abort, Resource
+from flask.ext.restful import abort, Resource
 from accessors.sample_control_accessor import SampleControlAccessor
 
 
