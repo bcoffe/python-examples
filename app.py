@@ -8,8 +8,8 @@ from tornado.wsgi import WSGIContainer
 app = Flask(__name__)
 api = Api(app)
 
-api.add_resource(SampleControl, '/sample_control/<string:sample_id>')
-api.add_resource(SampleControl, '/sample_control/<string:control_type>/<string:site>')
+api.add_resource(SampleControl, '/sample_controls/<string:sample_id>')
+api.add_resource(SampleControl, '/sample_controls/<string:control_type>/<string:site>')
 api.add_resource(SampleControls, '/sample_controls')
 
 if __name__ == '__main__':
