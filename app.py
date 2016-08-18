@@ -1,4 +1,4 @@
-from resources.sample_control import SampleControl, SampleControls
+from resources.sample_control import SampleControl
 from flask import Flask
 from flask_restful import Api
 from tornado.httpserver import HTTPServer
@@ -13,9 +13,7 @@ api = Api(app)
 # is to make an API consistent for the user. So neither plural nor singular is 'grammatically' correct
 # but we pick plural because it tends to be the favored practice.
 
-api.add_resource(SampleControl, '/sample_controls/<string:sample_id>')
-#api.add_resource(SampleControl, '/sample_controls/<string:control_type>/<string:site>')
-api.add_resource(SampleControls, '/sample_controls')
+api.add_resource(SampleControl, '/sample_controls')
 
 if __name__ == '__main__':
     http_server = HTTPServer(WSGIContainer(app))
