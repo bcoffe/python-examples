@@ -18,8 +18,9 @@ class SampleControlAccessor(DynamoDBAccessor):
             return MOCK_SAMPLE_CONTROLS[sample_id] if sample_id in MOCK_SAMPLE_CONTROLS else None
         return MOCK_SAMPLE_CONTROLS
 
+    # Just an empty function for example purposes
     def query_sample_controls(self, *query_parameters):
         parameters = list(query_parameters)
-        # Build the query here based on parameters
+        # TODO: Build the query here based on parameters
         return parameters
 

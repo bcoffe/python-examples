@@ -8,6 +8,11 @@ from tornado.wsgi import WSGIContainer
 app = Flask(__name__)
 api = Api(app)
 
+# Notice that the class names are single or plural, but I choose to keep the routes all plural
+# this was following a pattern I found on a blog. Its really just a matter of opinion. The goal
+# is to make an API consistent for the user. So neither plural nor singular is 'grammatically' correct
+# but we pick plural because it tends to be the favored practice.
+
 api.add_resource(SampleControl, '/sample_controls/<string:sample_id>')
 api.add_resource(SampleControl, '/sample_controls/<string:control_type>/<string:site>')
 api.add_resource(SampleControls, '/sample_controls')
