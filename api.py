@@ -1,4 +1,5 @@
-from resources.sample_control import SampleControl, SampleControls
+from resources.sample_control import SampleControl
+from resources.sample_controls import SampleControls
 from flask import Flask, jsonify, request
 from flask.ext.restful import Api, abort, Resource
 from flask.ext.cors import CORS
@@ -10,7 +11,7 @@ app = Flask(__name__)
 api = Api(app)
 
 api.add_resource(SampleControl, '/sample_control/<string:sample_id>')
-api.add_resource(SampleControls, '/sample_control')
+api.add_resource(SampleControls, '/sample_controls')
 
 if __name__ == '__main__':
     http_server = HTTPServer(WSGIContainer(app))
