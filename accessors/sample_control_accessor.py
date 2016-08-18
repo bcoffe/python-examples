@@ -11,7 +11,7 @@ MOCK_SAMPLE_CONTROLS = {
 # this code should know nothing about flask or rest services
 class SampleControlAccessor(DynamoDBAccessor):
     def __init__(self):
-        DynamoDBAccessor.__init__(self, 'sample_control')
+        DynamoDBAccessor.__init__(self, 'sample_controls')
 
     def get_sample_controls(self):
         return MOCK_SAMPLE_CONTROLS
