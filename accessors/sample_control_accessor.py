@@ -20,6 +20,6 @@ class SampleControlAccessor(DynamoDBAccessor):
 
     def query_sample_controls(self, *query_parameters):
         parameters = list(query_parameters)
-        # Put the query here based on parameters
+        # Build the query here based on parameters
         return parameters
 
