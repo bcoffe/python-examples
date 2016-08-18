@@ -13,10 +13,10 @@ class SampleControl(Resource):
         return sample_control if sample_control is not None else \
             abort(404, message="Sample Control {} doesn't exist".format(sample_id))
 
-    def post(self, control_type, site):
-        # do some work here to create a new sample control based on the type and site
-        # SampleControlAccessor().create(control_type, site)
-        return control_type
+    # def post(self, control_type, site):
+    #     # do some work here to create a new sample control based on the type and site
+    #     # SampleControlAccessor().create(control_type, site)
+    #     return control_type
 
 # Replace later with marshmallow but for now this works
 parser = reqparse.RequestParser()
